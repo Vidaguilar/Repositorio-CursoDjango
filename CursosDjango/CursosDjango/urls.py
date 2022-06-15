@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from contenido import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home/',views.principal, name="principal"),
-    path('curs/',views.cursos, name="cursos"),
-    path('reg/',views.registro, name="registro")
+    path('hola', admin.site.urls),
+    path('',views.principal, name="principal"),
+    path('curs',views.cursos, name="cursos"),
+    path('reg',views.registro, name="registro")
 ]

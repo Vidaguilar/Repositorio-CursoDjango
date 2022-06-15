@@ -1,0 +1,18 @@
+{% extends 'contenido/encabezabo.html' %}
+{% block titulo %}Registrar{% endblock titulo %}
+{% block  contenido%}
+
+<h2>Contactos</h2>
+     <p>Noombre: <input type="text" name="nombre"></p>
+    <p>Correo: <input type="text" name="correo"></p>
+    <label for="cars">Materias:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Matematicas</option>
+  <option value="saab">Base de datos </option>
+  <option value="mercedes">Programacion</option>
+  
+</select>
+    <p>COMENTARIOS:</p><p><textarea  cols="30" rows="10"></textarea></p>
+    <p><input type="button" value="Enviar" name="enviar"></p>
+    {% endblock  %}
