@@ -2,10 +2,27 @@
 
 {% block titulo %}Cursos{% endblock titulo %}
 
+{% block imagen %}
+{% load static %}
+{%static 'contenido/imagenes/curso.png' %}
+{% endblock  %}
+
+
 {% block  contenido%}
-<ul>
-    <li>Matematicas</li>
-    <li>Base de datos</li>
-    <li>Programacion</li>
-  </ul>
+<form action="index.html" method="post">
+      
+  <h1> Materias</h1>
+  
+  <fieldset>
+    <ul>
+      <legend><span class="number">1.-</span><li>Matematicas</li></legend>
+      <legend><span class="number">2.-</span><li>Base de datos</li></legend>
+      <legend><span class="number">3.-</span><li>Programacion</li></legend>
+      
+    </ul>
+    
+    </fieldset>
+  
+</form>
+
   {% endblock  %}

@@ -1,18 +1,47 @@
 {% extends 'contenido/encabezabo.html' %}
 {% block titulo %}Registrar{% endblock titulo %}
+
+{% block imagen %}
+{% load static %}
+{%static 'contenido/imagenes/contacto.png' %}
+{% endblock  %}
+
 {% block  contenido%}
 
-<h2>Contactos</h2>
-     <p>Noombre: <input type="text" name="nombre"></p>
-    <p>Correo: <input type="text" name="correo"></p>
-    <label for="cars">Materias:</label>
-
-<select name="cars" id="cars">
-  <option value="volvo">Matematicas</option>
-  <option value="saab">Base de datos </option>
-  <option value="mercedes">Programacion</option>
+<form action="index.html" method="post">
+      
+  <h1>Contactanos</h1>
   
-</select>
-    <p>COMENTARIOS:</p><p><textarea  cols="30" rows="10"></textarea></p>
-    <p><input type="button" value="Enviar" name="enviar"></p>
+  <fieldset>
+    <legend><span class="number">1</span>Tu Informacion Basica</legend>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="user_name">
+    
+    <label for="mail">Correo:</label>
+    <input type="email" id="mail" name="user_email">
+    
+    
+    
+    
+  </fieldset>
+  <fieldset>
+  <label for="job">Materias:</label>
+  <select id="job" name="user_job">
+      <option value="secretary">Matematicas</option>
+      <option value="secretary">Base de datos</option>
+      <option value="maintenance">Programacion</option>
+    
+  </select>
+  
+</fieldset>
+  <fieldset>
+    <legend><span class="number">2</span>Agrega tus Comentarios</legend>
+    <label for="bio">COMENTARIOS:</label>
+    <textarea id="bio" name="user_bio"></textarea>
+  </fieldset>
+  
+  <button type="submit">Enviar</button>
+</form>
+
+
     {% endblock  %}
