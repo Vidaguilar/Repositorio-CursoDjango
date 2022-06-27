@@ -29,12 +29,24 @@
             </ul>
         </div>
     </nav>
+<div class="page-content">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <a href="{ url 'principal'%}">
+                {%if request.path == '/' %}
+                        contenido
+                {%else%}
+                    contenido{{request.path}}
+                {%endif%}
+            </a>
+        </ul>
+    </div>
 
-    
-<!-- CONTENIDO -->
-{% block contenido %} <!--Template Tag-->
-<!--block sirve para indicar que colocaremos un bloque de
-contenido a través de nuestra variable content -->
-{% endblock %}
+ <!-- CONTENIDO -->
+  {% block contenido %} <!--Template Tag-->
+ <!--block sirve para indicar que colocaremos un bloque de
+ contenido a través de nuestra variable content -->
+  {% endblock %}
+</div> 
 </body>
 </html>
