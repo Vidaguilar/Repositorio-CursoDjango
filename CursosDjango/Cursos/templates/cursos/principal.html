@@ -20,29 +20,33 @@
         </div>
         <p class="lead mb-5">contenido</p>
         <table class="table table-bordered tablestriped">
-            <thead>
-            <tr>
-            <th>Foto</th>
-            <th>Materia</th>
-            <th>grado</th>
-            <th>Carrera</th>
-            <th>Profesor</th>
-            <th>descripcion</th>
-            </tr>
-            </thead>
-            <tbody>
+                <thead>
                 <tr>
-                <td class="text-center">
-                <img src="" alt="" class="img-media">
-                </td>
-                <td class="text-semibold">Materia</td>
-                <td class="muted">grado</td>
-                <td class="muted">Tic</td>
-                <td class="muted">Profesor</td>
-                <td class="muted">descripcion</td>
-
+                <th>Foto</th>
+                <th>Materia</th>
+                <th>grado</th>
+                
+                
+                <th>descripcion</th>
+                <th>Carrera</th>
+                <th>Profesor</th>
                 </tr>
-            </tbody>
+                </thead>
+            {% for curso in cursos  %}
+                <tbody>
+                    <tr>
+                    <td class="text-center">
+                    <img src="{{curso.imagen.url}}" alt="" class="img-media" >
+                    </td>
+                    <td class="text-semibold">{{curso.Materia}}</td>
+                    <td class="muted">{{curso.Grado}}</td>
+                    <td class="muted">{{curso.Descripcion}}</td>
+                    <td class="muted">{{curso.carrera}}</td>
+                    <td class="muted">{{curso.Profesor}}</td>
+
+                    </tr>
+                </tbody>
+            {% endfor %}
         </table>
         <div class="social-icons">
             <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>

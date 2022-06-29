@@ -5,6 +5,7 @@ from django.db import models
 class Cursos(models.Model): 
     Materia = models.CharField(max_length=12,verbose_name="Mat") 
     Grado = models.TextField()
+    imagen = models.ImageField(null=True,upload_to="fotos",verbose_name="Fotografía")
     Descripcion = models.TextField() 
     carrera = models.TextField()
     Profesor = models.TextField()
