@@ -21,8 +21,9 @@ from Cursos import views as views_cursos
 
 urlpatterns = [
     path('hola', admin.site.urls),
+    path('',views_cursos.cursos, name="Principal"),
     path('',views.principal, name="principal"),
-    path('1',views_cursos.cursos, name="Principal"),
+    
     path('curs',views.cursos, name="cursos"),
     path('reg',views.registro, name="registro")
 ]
