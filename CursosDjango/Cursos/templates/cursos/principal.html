@@ -30,6 +30,7 @@
                 <th>descripcion</th>
                 <th>Carrera</th>
                 <th>Profesor</th>
+                <th>impartido desde</th>
                 </tr>
                 </thead>
             {% for curso in cursos  %}
@@ -43,6 +44,7 @@
                     <td class="muted">{{curso.Descripcion}}</td>
                     <td class="muted">{{curso.carrera}}</td>
                     <td class="muted">{{curso.Profesor}}</td>
+                    <td class="muted">{{curso.created}}</td>
 
                     </tr>
                 </tbody>
